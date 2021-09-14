@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,24 @@ namespace Manager_Files
             cbo_DriveB.SelectedIndexChanged += (object sender, EventArgs e) => {
                 txt_PathB.Text = cbo_DriveB.SelectedValue.ToString();
                 SelectDataB(txt_PathB.Text);
+            };
+            dataGridViewA.MouseDoubleClick += (object sender, MouseEventArgs e) => {
+                if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString() == "<---")
+                {
+                    txt_PathA.Text = BackPath(txt_PathA.Text.Replace(@"\\", @"\"));
+                    SelectDataA(txt_PathA.Text);
+                    return;
+                }
+                if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TYPE_A"].Value.ToString() == "Folder")
+                {
+                    txt_PathA.Text = (txt_PathA.Text + "\\" + dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString()).Replace(@"\\", @"\");
+                    SelectDataA(txt_PathA.Text);
+                    return;
+                }
+                //MessageBox.Show(dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TENF_A"].Value.ToString());
+            };
+            dataGridViewB.MouseDoubleClick += (object sender, MouseEventArgs e) => {
+
             };
         }
 
@@ -65,7 +84,7 @@ namespace Manager_Files
             catch
             { }
             dataGridViewA.DataSource = table;
-            //Bientoancuc.setRowNumber(dataGridView1);
+            
         }
         public void SelectDataB(string PathB)
         {
@@ -93,7 +112,21 @@ namespace Manager_Files
             catch
             { }
             dataGridViewB.DataSource = table;
-            //Bientoancuc.setRowNumber(dataGridView1);
+            //.setRowNumber(dataGridView1);
+        }
+        private string BackPath(string s)
+        {
+            string s2 = "";
+            string[] s1 = s.Split('\\');
+            if (s1.Count() <= 1) return s;
+            for (int i = 0; i < s1.Count() - 1; i++)
+            {
+                if (i == 0)
+                    s2 = (s2 + s1[i] + "\\").Replace(@"\\", @"\");
+                else
+                    s2 = (s2 + "\\" + s1[i]).Replace(@"\\", @"\");
+            }
+            return s2;
         }
     }
 }

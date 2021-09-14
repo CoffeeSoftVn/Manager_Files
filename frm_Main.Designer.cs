@@ -29,12 +29,17 @@ namespace Manager_Files
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cbo_DriveA = new System.Windows.Forms.ComboBox();
+            this.btn_RefreshA = new System.Windows.Forms.Button();
+            this.btn_BackA = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cbo_DriveB = new System.Windows.Forms.ComboBox();
+            this.btn_RefreshB = new System.Windows.Forms.Button();
+            this.btn_BackB = new System.Windows.Forms.Button();
             this.dataGridViewA = new System.Windows.Forms.DataGridView();
             this.SELECT_A = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.NAME_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,9 +104,11 @@ namespace Manager_Files
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel3.Controls.Add(this.cbo_DriveA, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_RefreshA, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_BackA, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 37);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -116,16 +123,40 @@ namespace Manager_Files
             this.cbo_DriveA.FormattingEnabled = true;
             this.cbo_DriveA.Location = new System.Drawing.Point(3, 3);
             this.cbo_DriveA.Name = "cbo_DriveA";
-            this.cbo_DriveA.Size = new System.Drawing.Size(436, 23);
+            this.cbo_DriveA.Size = new System.Drawing.Size(416, 23);
             this.cbo_DriveA.TabIndex = 0;
+            // 
+            // btn_RefreshA
+            // 
+            this.btn_RefreshA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_RefreshA.Image = ((System.Drawing.Image)(resources.GetObject("btn_RefreshA.Image")));
+            this.btn_RefreshA.Location = new System.Drawing.Point(422, 0);
+            this.btn_RefreshA.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_RefreshA.Name = "btn_RefreshA";
+            this.btn_RefreshA.Size = new System.Drawing.Size(55, 29);
+            this.btn_RefreshA.TabIndex = 1;
+            this.btn_RefreshA.UseVisualStyleBackColor = true;
+            // 
+            // btn_BackA
+            // 
+            this.btn_BackA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_BackA.Image = ((System.Drawing.Image)(resources.GetObject("btn_BackA.Image")));
+            this.btn_BackA.Location = new System.Drawing.Point(477, 0);
+            this.btn_BackA.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_BackA.Name = "btn_BackA";
+            this.btn_BackA.Size = new System.Drawing.Size(55, 29);
+            this.btn_BackA.TabIndex = 2;
+            this.btn_BackA.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel4.Controls.Add(this.cbo_DriveB, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_RefreshB, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_BackB, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(545, 37);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -140,8 +171,30 @@ namespace Manager_Files
             this.cbo_DriveB.FormattingEnabled = true;
             this.cbo_DriveB.Location = new System.Drawing.Point(3, 3);
             this.cbo_DriveB.Name = "cbo_DriveB";
-            this.cbo_DriveB.Size = new System.Drawing.Size(436, 23);
+            this.cbo_DriveB.Size = new System.Drawing.Size(416, 23);
             this.cbo_DriveB.TabIndex = 0;
+            // 
+            // btn_RefreshB
+            // 
+            this.btn_RefreshB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_RefreshB.Image = ((System.Drawing.Image)(resources.GetObject("btn_RefreshB.Image")));
+            this.btn_RefreshB.Location = new System.Drawing.Point(422, 0);
+            this.btn_RefreshB.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_RefreshB.Name = "btn_RefreshB";
+            this.btn_RefreshB.Size = new System.Drawing.Size(55, 29);
+            this.btn_RefreshB.TabIndex = 1;
+            this.btn_RefreshB.UseVisualStyleBackColor = true;
+            // 
+            // btn_BackB
+            // 
+            this.btn_BackB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_BackB.Image = ((System.Drawing.Image)(resources.GetObject("btn_BackB.Image")));
+            this.btn_BackB.Location = new System.Drawing.Point(477, 0);
+            this.btn_BackB.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_BackB.Name = "btn_BackB";
+            this.btn_BackB.Size = new System.Drawing.Size(55, 29);
+            this.btn_BackB.TabIndex = 2;
+            this.btn_BackB.UseVisualStyleBackColor = true;
             // 
             // dataGridViewA
             // 
@@ -274,6 +327,7 @@ namespace Manager_Files
             this.txt_PathA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_PathA.Location = new System.Drawing.Point(5, 329);
             this.txt_PathA.Name = "txt_PathA";
+            this.txt_PathA.ReadOnly = true;
             this.txt_PathA.Size = new System.Drawing.Size(532, 23);
             this.txt_PathA.TabIndex = 4;
             // 
@@ -282,6 +336,7 @@ namespace Manager_Files
             this.txt_PathB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_PathB.Location = new System.Drawing.Point(545, 329);
             this.txt_PathB.Name = "txt_PathB";
+            this.txt_PathB.ReadOnly = true;
             this.txt_PathB.Size = new System.Drawing.Size(532, 23);
             this.txt_PathB.TabIndex = 5;
             // 
@@ -327,5 +382,9 @@ namespace Manager_Files
         private System.Windows.Forms.DataGridViewTextBoxColumn TYPE_B;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIZE_B;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_B;
+        private System.Windows.Forms.Button btn_RefreshA;
+        private System.Windows.Forms.Button btn_BackA;
+        private System.Windows.Forms.Button btn_RefreshB;
+        private System.Windows.Forms.Button btn_BackB;
     }
 }
