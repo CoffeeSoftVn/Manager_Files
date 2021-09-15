@@ -37,6 +37,32 @@ namespace Manager_Files
                     return;
                 }
              };
+            dataGridViewA.MouseClick += (object sender, MouseEventArgs e) => {
+                if (e.Button.ToString() == "Right") return;
+                try
+                {
+                    if ((dataGridViewA.CurrentCell.ColumnIndex == 0) && (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString() != "<---"))
+                    {
+                        dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["SELECT_A"].Value = !Convert.ToBoolean(dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["SELECT_A"].Value);
+                    }
+                }
+                catch
+                {
+                }
+            };
+            dataGridViewB.MouseClick += (object sender, MouseEventArgs e) => {
+                if (e.Button.ToString() == "Right") return;
+                try
+                {
+                    if ((dataGridViewB.CurrentCell.ColumnIndex == 0) && (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString() != "<---"))
+                    {
+                        dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["SELECT_B"].Value = !Convert.ToBoolean(dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["SELECT_B"].Value);
+                    }
+                }
+                catch
+                {
+                }
+            };
             dataGridViewB.MouseDoubleClick += (object sender, MouseEventArgs e) => {
                 if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString() == "<---")
                 {
@@ -117,6 +143,46 @@ namespace Manager_Files
                     if (dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString() != "<---")
                         dataGridViewB.Rows[i].Cells["SELECT_B"].Value = !(bool)(dataGridViewB.Rows[i].Cells["SELECT_B"].Value);
                 }
+            };
+            StripMenuItem_Delete_A.MouseDown += (object sender, MouseEventArgs e) =>
+            {
+                contextMenuStripA.Hide();
+                if (MessageBox.Show("Do you really want to do it?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) return;
+                for (int i = 0; i < dataGridViewA.RowCount; i++)
+                {
+                    if (dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString() != "<---")
+                        if ((bool)dataGridViewA.Rows[i].Cells["SELECT_A"].Value)
+                        {
+                            if (Convert.ToBoolean(dataGridViewA.Rows[i].Cells["SELECT_A"].Value) == true)
+                            {
+                                if (dataGridViewA.Rows[i].Cells["TYPE_A"].Value.Equals("Folder"))
+                                    System.IO.Directory.Delete(txt_PathA.Text + "\\" + dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString(), true);
+                                if (!dataGridViewA.Rows[i].Cells["TYPE_A"].Value.Equals("Folder"))
+                                    System.IO.File.Delete(txt_PathA.Text + "\\" + dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString());
+                            }
+                        }
+                }
+                SelectDataA(txt_PathA.Text);
+            };
+            StripMenuItem_Delete_B.MouseDown += (object sender, MouseEventArgs e) =>
+            {
+                contextMenuStripB.Hide();
+                if (MessageBox.Show("Do you really want to do it?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) return;
+                for (int i = 0; i < dataGridViewB.RowCount; i++)
+                {
+                    if (dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString() != "<---")
+                        if ((bool)dataGridViewB.Rows[i].Cells["SELECT_B"].Value)
+                        {
+                            if (Convert.ToBoolean(dataGridViewB.Rows[i].Cells["SELECT_B"].Value) == true)
+                            {
+                                if (dataGridViewB.Rows[i].Cells["TYPE_B"].Value.Equals("Folder"))
+                                    System.IO.Directory.Delete(txt_PathB.Text + "\\" + dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString(), true);
+                                if (!dataGridViewB.Rows[i].Cells["TYPE_B"].Value.Equals("Folder"))
+                                    System.IO.File.Delete(txt_PathB.Text + "\\" + dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString());
+                            }
+                        }
+                }
+                SelectDataB(txt_PathB.Text);
             };
 
         }
