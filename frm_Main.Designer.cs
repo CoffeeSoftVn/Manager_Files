@@ -58,18 +58,18 @@ namespace Manager_Files
             this.StripMenuItem_SelectAll_A = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_UnSelectAll_A = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_ContrarySelect_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.StripMenuItem_NewFolder_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Delete_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Rename_A = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.StripMenuItem_SelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_UnSelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_ContrarySelect_B = new System.Windows.Forms.ToolStripMenuItem();
-            this.StripMenuItem_NewFolder_A = new System.Windows.Forms.ToolStripMenuItem();
-            this.StripMenuItem_Delete_A = new System.Windows.Forms.ToolStripMenuItem();
-            this.StripMenuItem_Rename_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.StripMenuItem_NewFolder_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Delete_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Rename_B = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -392,39 +392,10 @@ namespace Manager_Files
             this.StripMenuItem_ContrarySelect_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_ContrarySelect_A.Text = "Contrary Select";
             // 
-            // contextMenuStripB
+            // toolStripSeparator2
             // 
-            this.contextMenuStripB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StripMenuItem_SelectAll_B,
-            this.StripMenuItem_UnSelectAll_B,
-            this.StripMenuItem_ContrarySelect_B,
-            this.toolStripSeparator1,
-            this.StripMenuItem_NewFolder_B,
-            this.StripMenuItem_Delete_B,
-            this.StripMenuItem_Rename_B});
-            this.contextMenuStripB.Name = "contextMenuStripB";
-            this.contextMenuStripB.Size = new System.Drawing.Size(155, 142);
-            // 
-            // StripMenuItem_SelectAll_B
-            // 
-            this.StripMenuItem_SelectAll_B.Image = global::Manager_Files.Properties.Resources.SelectAll;
-            this.StripMenuItem_SelectAll_B.Name = "StripMenuItem_SelectAll_B";
-            this.StripMenuItem_SelectAll_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_SelectAll_B.Text = "Select All";
-            // 
-            // StripMenuItem_UnSelectAll_B
-            // 
-            this.StripMenuItem_UnSelectAll_B.Image = global::Manager_Files.Properties.Resources.UnSelectAll;
-            this.StripMenuItem_UnSelectAll_B.Name = "StripMenuItem_UnSelectAll_B";
-            this.StripMenuItem_UnSelectAll_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_UnSelectAll_B.Text = "UnSelect All";
-            // 
-            // StripMenuItem_ContrarySelect_B
-            // 
-            this.StripMenuItem_ContrarySelect_B.Image = global::Manager_Files.Properties.Resources.InverseSelectAll;
-            this.StripMenuItem_ContrarySelect_B.Name = "StripMenuItem_ContrarySelect_B";
-            this.StripMenuItem_ContrarySelect_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_ContrarySelect_B.Text = "Contrary Select";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
             // 
             // StripMenuItem_NewFolder_A
             // 
@@ -444,33 +415,62 @@ namespace Manager_Files
             this.StripMenuItem_Rename_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_Rename_A.Text = "Rename";
             // 
-            // StripMenuItem_NewFolder_B
+            // contextMenuStripB
             // 
-            this.StripMenuItem_NewFolder_B.Name = "StripMenuItem_NewFolder_B";
-            this.StripMenuItem_NewFolder_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_NewFolder_B.Text = "New Folder";
+            this.contextMenuStripB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuItem_SelectAll_B,
+            this.StripMenuItem_UnSelectAll_B,
+            this.StripMenuItem_ContrarySelect_B,
+            this.toolStripSeparator1,
+            this.StripMenuItem_NewFolder_B,
+            this.StripMenuItem_Delete_B,
+            this.StripMenuItem_Rename_B});
+            this.contextMenuStripB.Name = "contextMenuStripB";
+            this.contextMenuStripB.Size = new System.Drawing.Size(155, 142);
             // 
-            // StripMenuItem_Delete_B
+            // StripMenuItem_SelectAll_B
             // 
-            this.StripMenuItem_Delete_B.Name = "StripMenuItem_Delete_B";
-            this.StripMenuItem_Delete_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_Delete_B.Text = "Delete";
+            this.StripMenuItem_SelectAll_B.Image = global::Manager_Files.Properties.Resources.SelectAll;
+            this.StripMenuItem_SelectAll_B.Name = "StripMenuItem_SelectAll_B";
+            this.StripMenuItem_SelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_SelectAll_B.Text = "Select All";
             // 
-            // StripMenuItem_Rename_B
+            // StripMenuItem_UnSelectAll_B
             // 
-            this.StripMenuItem_Rename_B.Name = "StripMenuItem_Rename_B";
-            this.StripMenuItem_Rename_B.Size = new System.Drawing.Size(180, 22);
-            this.StripMenuItem_Rename_B.Text = "Rename";
+            this.StripMenuItem_UnSelectAll_B.Image = global::Manager_Files.Properties.Resources.UnSelectAll;
+            this.StripMenuItem_UnSelectAll_B.Name = "StripMenuItem_UnSelectAll_B";
+            this.StripMenuItem_UnSelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_UnSelectAll_B.Text = "UnSelect All";
+            // 
+            // StripMenuItem_ContrarySelect_B
+            // 
+            this.StripMenuItem_ContrarySelect_B.Image = global::Manager_Files.Properties.Resources.InverseSelectAll;
+            this.StripMenuItem_ContrarySelect_B.Name = "StripMenuItem_ContrarySelect_B";
+            this.StripMenuItem_ContrarySelect_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_ContrarySelect_B.Text = "Contrary Select";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
             // 
-            // toolStripSeparator2
+            // StripMenuItem_NewFolder_B
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
+            this.StripMenuItem_NewFolder_B.Name = "StripMenuItem_NewFolder_B";
+            this.StripMenuItem_NewFolder_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_NewFolder_B.Text = "New Folder";
+            // 
+            // StripMenuItem_Delete_B
+            // 
+            this.StripMenuItem_Delete_B.Name = "StripMenuItem_Delete_B";
+            this.StripMenuItem_Delete_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Delete_B.Text = "Delete";
+            // 
+            // StripMenuItem_Rename_B
+            // 
+            this.StripMenuItem_Rename_B.Name = "StripMenuItem_Rename_B";
+            this.StripMenuItem_Rename_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Rename_B.Text = "Rename";
             // 
             // frm_Main
             // 
