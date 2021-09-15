@@ -36,13 +36,44 @@ namespace Manager_Files
                     SelectDataA(txt_PathA.Text);
                     return;
                 }
-                //MessageBox.Show(dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TENF_A"].Value.ToString());
-            };
+             };
             dataGridViewB.MouseDoubleClick += (object sender, MouseEventArgs e) => {
-
+                if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString() == "<---")
+                {
+                    txt_PathB.Text = BackPath(txt_PathB.Text.Replace(@"\\", @"\"));
+                    SelectDataB(txt_PathB.Text);
+                    return;
+                }
+                if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["TYPE_B"].Value.ToString() == "Folder")
+                {
+                    txt_PathB.Text = (txt_PathB.Text + "\\" + dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString()).Replace(@"\\", @"\");
+                    SelectDataB(txt_PathB.Text);
+                    return;
+                }
             };
+            btn_RefreshA.MouseClick += (object sender, MouseEventArgs e) => {
+                GetDriveA();
+            };
+            btn_RefreshB.MouseClick += (object sender, MouseEventArgs e) => {
+                GetDriveB();
+            };
+            btn_BackA.MouseClick += (object sender, MouseEventArgs e) => {
+                txt_PathA.Text = BackPath(txt_PathA.Text.Replace(@"\\", @"\"));
+                SelectDataA(txt_PathA.Text);
+            };
+            btn_BackB.MouseClick += (object sender, MouseEventArgs e) => {
+                txt_PathB.Text = BackPath(txt_PathB.Text.Replace(@"\\", @"\"));
+                SelectDataB(txt_PathB.Text);
+            };
+            txt_PathA.MouseDoubleClick += (object sender, MouseEventArgs e) => {
+                System.Diagnostics.Process.Start(@"explorer.exe", txt_PathA.Text);
+            };
+            txt_PathB.MouseDoubleClick += (object sender, MouseEventArgs e) => {
+                System.Diagnostics.Process.Start(@"explorer.exe", txt_PathB.Text);
+            };
+            dataGridViewA.ContextMenuStrip = contextMenuStripA;
+            dataGridViewB.ContextMenuStrip = contextMenuStripB;
         }
-
         private void frm_Main_Load(object sender, EventArgs e)
         {
             GetDriveA();
@@ -66,7 +97,6 @@ namespace Manager_Files
             table.Columns.Add("TYPE_A", typeof(string));
             table.Columns.Add("SIZE_A", typeof(string));
             table.Columns.Add("DATE_A", typeof(string));
-
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(PathA);
             if (PathA.Length > 3)
                 table.Rows.Add(false, "<---", "", "");
@@ -84,7 +114,6 @@ namespace Manager_Files
             catch
             { }
             dataGridViewA.DataSource = table;
-            
         }
         public void SelectDataB(string PathB)
         {
@@ -94,7 +123,6 @@ namespace Manager_Files
             table.Columns.Add("TYPE_B", typeof(string));
             table.Columns.Add("SIZE_B", typeof(string));
             table.Columns.Add("DATE_B", typeof(string));
-
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(PathB);
             if (PathB.Length > 3)
                 table.Rows.Add(false, "<---", "", "");
@@ -112,7 +140,6 @@ namespace Manager_Files
             catch
             { }
             dataGridViewB.DataSource = table;
-            //.setRowNumber(dataGridView1);
         }
         private string BackPath(string s)
         {

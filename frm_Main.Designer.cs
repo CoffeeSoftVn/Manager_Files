@@ -29,6 +29,7 @@ namespace Manager_Files
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,12 +55,22 @@ namespace Manager_Files
             this.DATE_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_PathA = new System.Windows.Forms.TextBox();
             this.txt_PathB = new System.Windows.Forms.TextBox();
+            this.contextMenuStripA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StripMenuItem_SelectAll_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_UnSelectAll_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_ContrarySelect_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStripB = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StripMenuItem_SelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_UnSelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_ContrarySelect_B = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewB)).BeginInit();
+            this.contextMenuStripA.SuspendLayout();
+            this.contextMenuStripB.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -340,6 +351,60 @@ namespace Manager_Files
             this.txt_PathB.Size = new System.Drawing.Size(532, 23);
             this.txt_PathB.TabIndex = 5;
             // 
+            // contextMenuStripA
+            // 
+            this.contextMenuStripA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuItem_SelectAll_A,
+            this.StripMenuItem_UnSelectAll_A,
+            this.StripMenuItem_ContrarySelect_A});
+            this.contextMenuStripA.Name = "contextMenuStripA";
+            this.contextMenuStripA.Size = new System.Drawing.Size(155, 70);
+            // 
+            // StripMenuItem_SelectAll_A
+            // 
+            this.StripMenuItem_SelectAll_A.Name = "StripMenuItem_SelectAll_A";
+            this.StripMenuItem_SelectAll_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_SelectAll_A.Text = "Select All";
+            // 
+            // StripMenuItem_UnSelectAll_A
+            // 
+            this.StripMenuItem_UnSelectAll_A.Name = "StripMenuItem_UnSelectAll_A";
+            this.StripMenuItem_UnSelectAll_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_UnSelectAll_A.Text = "UnSelect All";
+            // 
+            // StripMenuItem_ContrarySelect_A
+            // 
+            this.StripMenuItem_ContrarySelect_A.Name = "StripMenuItem_ContrarySelect_A";
+            this.StripMenuItem_ContrarySelect_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_ContrarySelect_A.Text = "Contrary Select";
+            // 
+            // contextMenuStripB
+            // 
+            this.contextMenuStripB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuItem_SelectAll_B,
+            this.StripMenuItem_UnSelectAll_B,
+            this.StripMenuItem_ContrarySelect_B});
+            this.contextMenuStripB.Name = "contextMenuStripB";
+            this.contextMenuStripB.Size = new System.Drawing.Size(155, 70);
+            // 
+            // StripMenuItem_SelectAll_B
+            // 
+            this.StripMenuItem_SelectAll_B.Name = "StripMenuItem_SelectAll_B";
+            this.StripMenuItem_SelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_SelectAll_B.Text = "Select All";
+            // 
+            // StripMenuItem_UnSelectAll_B
+            // 
+            this.StripMenuItem_UnSelectAll_B.Name = "StripMenuItem_UnSelectAll_B";
+            this.StripMenuItem_UnSelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_UnSelectAll_B.Text = "UnSelect All";
+            // 
+            // StripMenuItem_ContrarySelect_B
+            // 
+            this.StripMenuItem_ContrarySelect_B.Name = "StripMenuItem_ContrarySelect_B";
+            this.StripMenuItem_ContrarySelect_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_ContrarySelect_B.Text = "Contrary Select";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -347,7 +412,7 @@ namespace Manager_Files
             this.ClientSize = new System.Drawing.Size(1088, 434);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frm_Main";
-            this.Text = "frm_Main";
+            this.Text = "Manager_Files";
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -356,6 +421,8 @@ namespace Manager_Files
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewB)).EndInit();
+            this.contextMenuStripA.ResumeLayout(false);
+            this.contextMenuStripB.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -386,5 +453,13 @@ namespace Manager_Files
         private System.Windows.Forms.Button btn_BackA;
         private System.Windows.Forms.Button btn_RefreshB;
         private System.Windows.Forms.Button btn_BackB;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripA;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripB;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_SelectAll_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_UnSelectAll_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_ContrarySelect_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_SelectAll_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_UnSelectAll_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_ContrarySelect_B;
     }
 }
