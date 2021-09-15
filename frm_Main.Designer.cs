@@ -30,7 +30,6 @@ namespace Manager_Files
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,6 +62,14 @@ namespace Manager_Files
             this.StripMenuItem_SelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_UnSelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_ContrarySelect_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_NewFolder_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Delete_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Rename_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_NewFolder_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Delete_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Rename_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -140,7 +147,7 @@ namespace Manager_Files
             // btn_RefreshA
             // 
             this.btn_RefreshA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_RefreshA.Image = ((System.Drawing.Image)(resources.GetObject("btn_RefreshA.Image")));
+            this.btn_RefreshA.Image = global::Manager_Files.Properties.Resources.Refresh;
             this.btn_RefreshA.Location = new System.Drawing.Point(422, 0);
             this.btn_RefreshA.Margin = new System.Windows.Forms.Padding(0);
             this.btn_RefreshA.Name = "btn_RefreshA";
@@ -151,7 +158,7 @@ namespace Manager_Files
             // btn_BackA
             // 
             this.btn_BackA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_BackA.Image = ((System.Drawing.Image)(resources.GetObject("btn_BackA.Image")));
+            this.btn_BackA.Image = global::Manager_Files.Properties.Resources.BackPath;
             this.btn_BackA.Location = new System.Drawing.Point(477, 0);
             this.btn_BackA.Margin = new System.Windows.Forms.Padding(0);
             this.btn_BackA.Name = "btn_BackA";
@@ -188,7 +195,7 @@ namespace Manager_Files
             // btn_RefreshB
             // 
             this.btn_RefreshB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_RefreshB.Image = ((System.Drawing.Image)(resources.GetObject("btn_RefreshB.Image")));
+            this.btn_RefreshB.Image = global::Manager_Files.Properties.Resources.Refresh;
             this.btn_RefreshB.Location = new System.Drawing.Point(422, 0);
             this.btn_RefreshB.Margin = new System.Windows.Forms.Padding(0);
             this.btn_RefreshB.Name = "btn_RefreshB";
@@ -199,7 +206,7 @@ namespace Manager_Files
             // btn_BackB
             // 
             this.btn_BackB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_BackB.Image = ((System.Drawing.Image)(resources.GetObject("btn_BackB.Image")));
+            this.btn_BackB.Image = global::Manager_Files.Properties.Resources.BackPath;
             this.btn_BackB.Location = new System.Drawing.Point(477, 0);
             this.btn_BackB.Margin = new System.Windows.Forms.Padding(0);
             this.btn_BackB.Name = "btn_BackB";
@@ -356,24 +363,31 @@ namespace Manager_Files
             this.contextMenuStripA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenuItem_SelectAll_A,
             this.StripMenuItem_UnSelectAll_A,
-            this.StripMenuItem_ContrarySelect_A});
+            this.StripMenuItem_ContrarySelect_A,
+            this.toolStripSeparator2,
+            this.StripMenuItem_NewFolder_A,
+            this.StripMenuItem_Delete_A,
+            this.StripMenuItem_Rename_A});
             this.contextMenuStripA.Name = "contextMenuStripA";
-            this.contextMenuStripA.Size = new System.Drawing.Size(155, 70);
+            this.contextMenuStripA.Size = new System.Drawing.Size(155, 142);
             // 
             // StripMenuItem_SelectAll_A
             // 
+            this.StripMenuItem_SelectAll_A.Image = global::Manager_Files.Properties.Resources.SelectAll;
             this.StripMenuItem_SelectAll_A.Name = "StripMenuItem_SelectAll_A";
             this.StripMenuItem_SelectAll_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_SelectAll_A.Text = "Select All";
             // 
             // StripMenuItem_UnSelectAll_A
             // 
+            this.StripMenuItem_UnSelectAll_A.Image = global::Manager_Files.Properties.Resources.UnSelectAll;
             this.StripMenuItem_UnSelectAll_A.Name = "StripMenuItem_UnSelectAll_A";
             this.StripMenuItem_UnSelectAll_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_UnSelectAll_A.Text = "UnSelect All";
             // 
             // StripMenuItem_ContrarySelect_A
             // 
+            this.StripMenuItem_ContrarySelect_A.Image = global::Manager_Files.Properties.Resources.InverseSelectAll;
             this.StripMenuItem_ContrarySelect_A.Name = "StripMenuItem_ContrarySelect_A";
             this.StripMenuItem_ContrarySelect_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_ContrarySelect_A.Text = "Contrary Select";
@@ -383,27 +397,80 @@ namespace Manager_Files
             this.contextMenuStripB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenuItem_SelectAll_B,
             this.StripMenuItem_UnSelectAll_B,
-            this.StripMenuItem_ContrarySelect_B});
+            this.StripMenuItem_ContrarySelect_B,
+            this.toolStripSeparator1,
+            this.StripMenuItem_NewFolder_B,
+            this.StripMenuItem_Delete_B,
+            this.StripMenuItem_Rename_B});
             this.contextMenuStripB.Name = "contextMenuStripB";
-            this.contextMenuStripB.Size = new System.Drawing.Size(155, 70);
+            this.contextMenuStripB.Size = new System.Drawing.Size(155, 142);
             // 
             // StripMenuItem_SelectAll_B
             // 
+            this.StripMenuItem_SelectAll_B.Image = global::Manager_Files.Properties.Resources.SelectAll;
             this.StripMenuItem_SelectAll_B.Name = "StripMenuItem_SelectAll_B";
-            this.StripMenuItem_SelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_SelectAll_B.Size = new System.Drawing.Size(180, 22);
             this.StripMenuItem_SelectAll_B.Text = "Select All";
             // 
             // StripMenuItem_UnSelectAll_B
             // 
+            this.StripMenuItem_UnSelectAll_B.Image = global::Manager_Files.Properties.Resources.UnSelectAll;
             this.StripMenuItem_UnSelectAll_B.Name = "StripMenuItem_UnSelectAll_B";
-            this.StripMenuItem_UnSelectAll_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_UnSelectAll_B.Size = new System.Drawing.Size(180, 22);
             this.StripMenuItem_UnSelectAll_B.Text = "UnSelect All";
             // 
             // StripMenuItem_ContrarySelect_B
             // 
+            this.StripMenuItem_ContrarySelect_B.Image = global::Manager_Files.Properties.Resources.InverseSelectAll;
             this.StripMenuItem_ContrarySelect_B.Name = "StripMenuItem_ContrarySelect_B";
-            this.StripMenuItem_ContrarySelect_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_ContrarySelect_B.Size = new System.Drawing.Size(180, 22);
             this.StripMenuItem_ContrarySelect_B.Text = "Contrary Select";
+            // 
+            // StripMenuItem_NewFolder_A
+            // 
+            this.StripMenuItem_NewFolder_A.Name = "StripMenuItem_NewFolder_A";
+            this.StripMenuItem_NewFolder_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_NewFolder_A.Text = "New Folder";
+            // 
+            // StripMenuItem_Delete_A
+            // 
+            this.StripMenuItem_Delete_A.Name = "StripMenuItem_Delete_A";
+            this.StripMenuItem_Delete_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Delete_A.Text = "Delete";
+            // 
+            // StripMenuItem_Rename_A
+            // 
+            this.StripMenuItem_Rename_A.Name = "StripMenuItem_Rename_A";
+            this.StripMenuItem_Rename_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Rename_A.Text = "Rename";
+            // 
+            // StripMenuItem_NewFolder_B
+            // 
+            this.StripMenuItem_NewFolder_B.Name = "StripMenuItem_NewFolder_B";
+            this.StripMenuItem_NewFolder_B.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_NewFolder_B.Text = "New Folder";
+            // 
+            // StripMenuItem_Delete_B
+            // 
+            this.StripMenuItem_Delete_B.Name = "StripMenuItem_Delete_B";
+            this.StripMenuItem_Delete_B.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_Delete_B.Text = "Delete";
+            // 
+            // StripMenuItem_Rename_B
+            // 
+            this.StripMenuItem_Rename_B.Name = "StripMenuItem_Rename_B";
+            this.StripMenuItem_Rename_B.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_Rename_B.Text = "Rename";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
             // 
             // frm_Main
             // 
@@ -461,5 +528,13 @@ namespace Manager_Files
         private System.Windows.Forms.ToolStripMenuItem StripMenuItem_SelectAll_B;
         private System.Windows.Forms.ToolStripMenuItem StripMenuItem_UnSelectAll_B;
         private System.Windows.Forms.ToolStripMenuItem StripMenuItem_ContrarySelect_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_NewFolder_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Delete_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Rename_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_NewFolder_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Delete_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Rename_B;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

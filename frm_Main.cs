@@ -73,6 +73,52 @@ namespace Manager_Files
             };
             dataGridViewA.ContextMenuStrip = contextMenuStripA;
             dataGridViewB.ContextMenuStrip = contextMenuStripB;
+
+            StripMenuItem_SelectAll_A.MouseDown += (object sender, MouseEventArgs e) =>
+            {
+                for (int i = 0; i < dataGridViewA.RowCount; i++)
+                {
+                    if (dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString() != "<---")
+                        dataGridViewA.Rows[i].Cells["SELECT_A"].Value = true;
+                }
+            };
+            StripMenuItem_UnSelectAll_A.MouseDown += (object sender, MouseEventArgs e) => {
+                for (int i = 0; i < dataGridViewA.RowCount; i++)
+                {
+                    if (dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString() != "<---")
+                        dataGridViewA.Rows[i].Cells["SELECT_A"].Value = false;
+                }
+            };
+            StripMenuItem_ContrarySelect_A.MouseDown += (object sender, MouseEventArgs e) => {
+                for (int i = 0; i < dataGridViewA.RowCount; i++)
+                {
+                    if (dataGridViewA.Rows[i].Cells["NAME_A"].Value.ToString() != "<---")
+                        dataGridViewA.Rows[i].Cells["SELECT_A"].Value = !(bool)(dataGridViewA.Rows[i].Cells["SELECT_A"].Value);
+                }
+            };
+            StripMenuItem_SelectAll_B.MouseDown += (object sender, MouseEventArgs e) =>
+            {
+                for (int i = 0; i < dataGridViewB.RowCount; i++)
+                {
+                    if (dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString() != "<---")
+                        dataGridViewB.Rows[i].Cells["SELECT_B"].Value = true;
+                }
+            };
+            StripMenuItem_UnSelectAll_B.MouseDown += (object sender, MouseEventArgs e) => {
+                for (int i = 0; i < dataGridViewB.RowCount; i++)
+                {
+                    if (dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString() != "<---")
+                        dataGridViewB.Rows[i].Cells["SELECT_B"].Value = false;
+                }
+            };
+            StripMenuItem_ContrarySelect_B.MouseDown += (object sender, MouseEventArgs e) => {
+                for (int i = 0; i < dataGridViewB.RowCount; i++)
+                {
+                    if (dataGridViewB.Rows[i].Cells["NAME_B"].Value.ToString() != "<---")
+                        dataGridViewB.Rows[i].Cells["SELECT_B"].Value = !(bool)(dataGridViewB.Rows[i].Cells["SELECT_B"].Value);
+                }
+            };
+
         }
         private void frm_Main_Load(object sender, EventArgs e)
         {
