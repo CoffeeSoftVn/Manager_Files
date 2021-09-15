@@ -17,23 +17,23 @@ namespace Manager_Files
             InitializeComponent();
             cbo_DriveA.SelectedIndexChanged += (object sender, EventArgs e) => {
                 txt_PathA.Text = cbo_DriveA.SelectedValue.ToString();
-                SelectDataA(txt_PathA.Text);
+                SelectDataA();
             };
             cbo_DriveB.SelectedIndexChanged += (object sender, EventArgs e) => {
                 txt_PathB.Text = cbo_DriveB.SelectedValue.ToString();
-                SelectDataB(txt_PathB.Text);
+                SelectDataB();
             };
             dataGridViewA.MouseDoubleClick += (object sender, MouseEventArgs e) => {
                 if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString() == "<---")
                 {
                     txt_PathA.Text = BackPath(txt_PathA.Text.Replace(@"\\", @"\"));
-                    SelectDataA(txt_PathA.Text);
+                    SelectDataA();
                     return;
                 }
                 if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TYPE_A"].Value.ToString() == "Folder")
                 {
                     txt_PathA.Text = (txt_PathA.Text + "\\" + dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString()).Replace(@"\\", @"\");
-                    SelectDataA(txt_PathA.Text);
+                    SelectDataA();
                     return;
                 }
              };
@@ -67,13 +67,13 @@ namespace Manager_Files
                 if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString() == "<---")
                 {
                     txt_PathB.Text = BackPath(txt_PathB.Text.Replace(@"\\", @"\"));
-                    SelectDataB(txt_PathB.Text);
+                    SelectDataB();
                     return;
                 }
                 if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["TYPE_B"].Value.ToString() == "Folder")
                 {
                     txt_PathB.Text = (txt_PathB.Text + "\\" + dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString()).Replace(@"\\", @"\");
-                    SelectDataB(txt_PathB.Text);
+                    SelectDataB();
                     return;
                 }
             };
@@ -85,11 +85,11 @@ namespace Manager_Files
             };
             btn_BackA.MouseClick += (object sender, MouseEventArgs e) => {
                 txt_PathA.Text = BackPath(txt_PathA.Text.Replace(@"\\", @"\"));
-                SelectDataA(txt_PathA.Text);
+                SelectDataA();
             };
             btn_BackB.MouseClick += (object sender, MouseEventArgs e) => {
                 txt_PathB.Text = BackPath(txt_PathB.Text.Replace(@"\\", @"\"));
-                SelectDataB(txt_PathB.Text);
+                SelectDataB();
             };
             txt_PathA.MouseDoubleClick += (object sender, MouseEventArgs e) => {
                 System.Diagnostics.Process.Start(@"explorer.exe", txt_PathA.Text);
@@ -144,6 +144,12 @@ namespace Manager_Files
                         dataGridViewB.Rows[i].Cells["SELECT_B"].Value = !(bool)(dataGridViewB.Rows[i].Cells["SELECT_B"].Value);
                 }
             };
+            StripMenuItem_NewFolder_A.MouseDown += (object sender, MouseEventArgs e) => {
+                new frm_NewFolder(this, txt_PathA.Text, true).ShowDialog();
+            };
+            StripMenuItem_NewFolder_B.MouseDown += (object sender, MouseEventArgs e) => {
+                new frm_NewFolder(this, txt_PathB.Text, false).ShowDialog();
+            };
             StripMenuItem_Delete_A.MouseDown += (object sender, MouseEventArgs e) =>
             {
                 contextMenuStripA.Hide();
@@ -162,7 +168,7 @@ namespace Manager_Files
                             }
                         }
                 }
-                SelectDataA(txt_PathA.Text);
+                SelectDataA();
             };
             StripMenuItem_Delete_B.MouseDown += (object sender, MouseEventArgs e) =>
             {
@@ -182,9 +188,14 @@ namespace Manager_Files
                             }
                         }
                 }
-                SelectDataB(txt_PathB.Text);
+                SelectDataB();
             };
+            StripMenuItem_Rename_A.MouseDown += (object sender, MouseEventArgs e) => {
+            
+            };
+            StripMenuItem_Rename_B.MouseDown += (object sender, MouseEventArgs e) => {
 
+            };
         }
         private void frm_Main_Load(object sender, EventArgs e)
         {
@@ -201,8 +212,9 @@ namespace Manager_Files
             cbo_DriveB.DataSource = System.IO.DriveInfo.GetDrives();
             cbo_DriveB.DisplayMember = "Name";
         }
-        public void SelectDataA(string PathA)
+        public void SelectDataA()
         {
+            string PathA = txt_PathA.Text;
             DataTable table = new DataTable();
             table.Columns.Add("SELECT_A", typeof(Boolean));
             table.Columns.Add("NAME_A", typeof(string));
@@ -227,8 +239,9 @@ namespace Manager_Files
             { }
             dataGridViewA.DataSource = table;
         }
-        public void SelectDataB(string PathB)
+        public void SelectDataB()
         {
+            string PathB = txt_PathB.Text;
             DataTable table = new DataTable();
             table.Columns.Add("SELECT_B", typeof(Boolean));
             table.Columns.Add("NAME_B", typeof(string));
