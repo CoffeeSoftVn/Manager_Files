@@ -191,10 +191,20 @@ namespace Manager_Files
                 SelectDataB();
             };
             StripMenuItem_Rename_A.MouseDown += (object sender, MouseEventArgs e) => {
-            
+                bool type;
+                if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TYPE_A"].Value.ToString().Equals(""))
+                    type = true;
+                else
+                    type = false;
+                new frm_Rename(this, txt_PathA.Text, dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString(), true, type).ShowDialog();
             };
             StripMenuItem_Rename_B.MouseDown += (object sender, MouseEventArgs e) => {
-
+                bool type;
+                if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["TYPE_B"].Value.ToString().Equals(""))
+                    type = true;
+                else
+                    type = false;
+                new frm_Rename(this, txt_PathB.Text, dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString(), true, type).ShowDialog();
             };
         }
         private void frm_Main_Load(object sender, EventArgs e)

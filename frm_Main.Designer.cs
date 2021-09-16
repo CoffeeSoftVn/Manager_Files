@@ -369,53 +369,53 @@ namespace Manager_Files
             this.StripMenuItem_Delete_A,
             this.StripMenuItem_Rename_A});
             this.contextMenuStripA.Name = "contextMenuStripA";
-            this.contextMenuStripA.Size = new System.Drawing.Size(181, 164);
+            this.contextMenuStripA.Size = new System.Drawing.Size(155, 142);
             // 
             // StripMenuItem_SelectAll_A
             // 
             this.StripMenuItem_SelectAll_A.Image = global::Manager_Files.Properties.Resources.SelectAll;
             this.StripMenuItem_SelectAll_A.Name = "StripMenuItem_SelectAll_A";
-            this.StripMenuItem_SelectAll_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_SelectAll_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_SelectAll_A.Text = "Select All";
             // 
             // StripMenuItem_UnSelectAll_A
             // 
             this.StripMenuItem_UnSelectAll_A.Image = global::Manager_Files.Properties.Resources.UnSelectAll;
             this.StripMenuItem_UnSelectAll_A.Name = "StripMenuItem_UnSelectAll_A";
-            this.StripMenuItem_UnSelectAll_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_UnSelectAll_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_UnSelectAll_A.Text = "UnSelect All";
             // 
             // StripMenuItem_ContrarySelect_A
             // 
             this.StripMenuItem_ContrarySelect_A.Image = global::Manager_Files.Properties.Resources.InverseSelectAll;
             this.StripMenuItem_ContrarySelect_A.Name = "StripMenuItem_ContrarySelect_A";
-            this.StripMenuItem_ContrarySelect_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_ContrarySelect_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_ContrarySelect_A.Text = "Contrary Select";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
             // 
             // StripMenuItem_NewFolder_A
             // 
             this.StripMenuItem_NewFolder_A.Image = global::Manager_Files.Properties.Resources.NewFolder;
             this.StripMenuItem_NewFolder_A.Name = "StripMenuItem_NewFolder_A";
-            this.StripMenuItem_NewFolder_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_NewFolder_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_NewFolder_A.Text = "New Folder";
             // 
             // StripMenuItem_Delete_A
             // 
             this.StripMenuItem_Delete_A.Image = global::Manager_Files.Properties.Resources.Delete;
             this.StripMenuItem_Delete_A.Name = "StripMenuItem_Delete_A";
-            this.StripMenuItem_Delete_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_Delete_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_Delete_A.Text = "Delete";
             // 
             // StripMenuItem_Rename_A
             // 
             this.StripMenuItem_Rename_A.Image = global::Manager_Files.Properties.Resources.Rename;
             this.StripMenuItem_Rename_A.Name = "StripMenuItem_Rename_A";
-            this.StripMenuItem_Rename_A.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuItem_Rename_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_Rename_A.Text = "Rename";
             // 
             // contextMenuStripB
@@ -486,6 +486,7 @@ namespace Manager_Files
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frm_Main";
             this.Text = "Manager_Files";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
