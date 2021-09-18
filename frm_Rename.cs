@@ -30,18 +30,29 @@ namespace Manager_Files
             btn_ReName.MouseClick += (object sender, MouseEventArgs e) =>
             {
                 if (txt_ReName.Text.Trim().Equals("")) {
-                    this.Text = string.Format("{0} - {1}", "Rename", "Not empty the name!");
+                    this.Text = string.Format("{0} - {1}", "Rename - ", "Not empty the name!");
                     this.txt_ReName.Focus();
                     return;
                 }
-                if (this.Type)
-                {
-                    
+                try {
+                    if (this.Type) //true file, false folden
+                    {
+                        System.IO.File.Move(path + @"\" + name, path + @"\" + txt_ReName.Text);
+                    }
+                    else
+                    {
+                        System.IO.Directory.Move(path + @"\" + name, path + @"\" + txt_ReName.Text);
+                    }
+                    if (LR)
+                        f.SelectDataA();
+                    else
+                        f.SelectDataB();
+                    this.Close();
+                    return;
+                } catch {
+                    this.Text = string.Format("{0} - {1}", "Rename - ", "Can't change name!");
                 }
-                else { 
-                
-                }
-
+         
             };
             btn_Cancel.MouseClick += (object sender, MouseEventArgs e) =>
             {

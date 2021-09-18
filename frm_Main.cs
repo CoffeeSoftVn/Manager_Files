@@ -204,7 +204,7 @@ namespace Manager_Files
                     type = true;
                 else
                     type = false;
-                new frm_Rename(this, txt_PathB.Text, dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString(), true, type).ShowDialog();
+                new frm_Rename(this, txt_PathB.Text, dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString(), false, type).ShowDialog();
             };
         }
         private void frm_Main_Load(object sender, EventArgs e)
