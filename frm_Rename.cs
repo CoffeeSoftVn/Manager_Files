@@ -14,7 +14,7 @@ namespace Manager_Files
     {
         private frm_Main f;
         private string Path;
-        private string Name;
+        //private string NameF;
         private bool LR;
         private bool Type;
         public frm_Rename()
@@ -24,9 +24,9 @@ namespace Manager_Files
         public frm_Rename(frm_Main f, string path,string name, bool LR, bool Type)
         {
             InitializeComponent();
-            { this.f = f; Path = path; this.Name = name; this.LR = LR; this.Type = Type; }
+            { this.f = f; Path = path; this.LR = LR; this.Type = Type; }
             this.ActiveControl = txt_ReName;
-            txt_ReName.Text = Name;
+            txt_ReName.Text = name;
             btn_ReName.MouseClick += (object sender, MouseEventArgs e) =>
             {
                 if (txt_ReName.Text.Trim().Equals("")) {
