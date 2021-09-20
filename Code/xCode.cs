@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Manager_Files
 {
-    public class xCode
+    public static class xCode
     {
         public delegate void percent(double cent);
-        public bool CopyFile(string fromPath, string toPath, int eachReadLength, percent p)
+        public static bool CopyFile1(string fromPath, string toPath, int eachReadLength, percent p)
         {
             int toCopyLength = 0;
             FileStream fromFile, toFile;
@@ -71,5 +71,10 @@ namespace Manager_Files
             toFile.Close();
             return true;
         }
+
+        //internal bool CopyFile(string v1, string v2, Action<object> p)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

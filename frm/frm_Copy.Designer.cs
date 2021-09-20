@@ -30,17 +30,17 @@ namespace Manager_Files
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_Progress2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_Progress1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Perform = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -51,9 +51,9 @@ namespace Manager_Files
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label_Progress2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label_Progress1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,19 +69,19 @@ namespace Manager_Files
             this.tableLayoutPanel1.Size = new System.Drawing.Size(466, 429);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label4
+            // label_Progress2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Turquoise;
-            this.label4.Location = new System.Drawing.Point(3, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(460, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "................................................................................." +
+            this.label_Progress2.AutoSize = true;
+            this.label_Progress2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Progress2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Progress2.ForeColor = System.Drawing.Color.Turquoise;
+            this.label_Progress2.Location = new System.Drawing.Point(3, 95);
+            this.label_Progress2.Name = "label_Progress2";
+            this.label_Progress2.Size = new System.Drawing.Size(460, 25);
+            this.label_Progress2.TabIndex = 3;
+            this.label_Progress2.Text = "................................................................................." +
     "................... 100%";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_Progress2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel2
             // 
@@ -125,19 +125,19 @@ namespace Manager_Files
             this.label1.Text = "Progress";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // label_Progress1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Turquoise;
-            this.label2.Location = new System.Drawing.Point(3, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(460, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "................................................................................." +
+            this.label_Progress1.AutoSize = true;
+            this.label_Progress1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Progress1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Progress1.ForeColor = System.Drawing.Color.Turquoise;
+            this.label_Progress1.Location = new System.Drawing.Point(3, 35);
+            this.label_Progress1.Name = "label_Progress1";
+            this.label_Progress1.Size = new System.Drawing.Size(460, 25);
+            this.label_Progress1.TabIndex = 1;
+            this.label_Progress1.Text = "................................................................................." +
     "................... 100%";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_Progress1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -201,7 +201,7 @@ namespace Manager_Files
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Controls.Add(this.button1, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_Perform, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 397);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -211,18 +211,18 @@ namespace Manager_Files
             this.tableLayoutPanel4.Size = new System.Drawing.Size(460, 29);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
-            // button1
+            // btn_Perform
             // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(345, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Perform.BackColor = System.Drawing.Color.Turquoise;
+            this.btn_Perform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Perform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Perform.Location = new System.Drawing.Point(345, 0);
+            this.btn_Perform.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Perform.Name = "btn_Perform";
+            this.btn_Perform.Size = new System.Drawing.Size(115, 29);
+            this.btn_Perform.TabIndex = 0;
+            this.btn_Perform.Text = "button1";
+            this.btn_Perform.UseVisualStyleBackColor = false;
             // 
             // frm_Copy
             // 
@@ -251,13 +251,13 @@ namespace Manager_Files
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Progress1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_Progress2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Perform;
     }
 }
