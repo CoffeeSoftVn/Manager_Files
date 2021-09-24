@@ -36,7 +36,17 @@ namespace Manager_Files
                     SelectDataA();
                     return;
                 }
-             };
+                if (dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["TYPE_A"].Value.ToString() != "Folder")
+                {
+                    var p = new System.Diagnostics.Process();
+                    p.StartInfo = new System.Diagnostics.ProcessStartInfo((txt_PathA.Text + @"\" + dataGridViewA.Rows[dataGridViewA.CurrentCell.RowIndex].Cells["NAME_A"].Value.ToString()).Replace(@"\\", @"\"))
+                    {
+                        UseShellExecute = true
+                    };
+                    p.Start();
+                    return;
+                }
+            };
             dataGridViewA.MouseClick += (object sender, MouseEventArgs e) => {
                 if (e.Button.ToString() == "Right") return;
                 try
@@ -74,6 +84,15 @@ namespace Manager_Files
                 {
                     txt_PathB.Text = (txt_PathB.Text + "\\" + dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString()).Replace(@"\\", @"\");
                     SelectDataB();
+                    return;
+                }
+                if (dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["TYPE_B"].Value.ToString() != "Folder") {
+                    var p = new System.Diagnostics.Process();
+                    p.StartInfo = new System.Diagnostics.ProcessStartInfo((txt_PathB.Text + @"\" + dataGridViewB.Rows[dataGridViewB.CurrentCell.RowIndex].Cells["NAME_B"].Value.ToString()).Replace(@"\\", @"\"))
+                    {
+                        UseShellExecute = true
+                    };
+                    p.Start();
                     return;
                 }
             };
@@ -289,6 +308,26 @@ namespace Manager_Files
                     s2 = (s2 + "\\" + s1[i]).Replace(@"\\", @"\");
             }
             return s2;
+        }
+
+        private void StripMenuItem_Copy_A_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StripMenuItem_Move_A_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StripMenuItem_Copy_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StripMenuItem_Move_B_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

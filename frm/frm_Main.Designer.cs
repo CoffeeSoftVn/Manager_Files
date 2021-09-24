@@ -62,6 +62,9 @@ namespace Manager_Files
             this.StripMenuItem_NewFolder_A = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Delete_A = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Rename_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.StripMenuItem_Copy_A = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Move_A = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.StripMenuItem_SelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_UnSelectAll_B = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +73,9 @@ namespace Manager_Files
             this.StripMenuItem_NewFolder_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Delete_B = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem_Rename_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.StripMenuItem_Copy_B = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuItem_Move_B = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -367,9 +373,12 @@ namespace Manager_Files
             this.toolStripSeparator2,
             this.StripMenuItem_NewFolder_A,
             this.StripMenuItem_Delete_A,
-            this.StripMenuItem_Rename_A});
+            this.StripMenuItem_Rename_A,
+            this.toolStripSeparator3,
+            this.StripMenuItem_Copy_A,
+            this.StripMenuItem_Move_A});
             this.contextMenuStripA.Name = "contextMenuStripA";
-            this.contextMenuStripA.Size = new System.Drawing.Size(155, 142);
+            this.contextMenuStripA.Size = new System.Drawing.Size(155, 192);
             // 
             // StripMenuItem_SelectAll_A
             // 
@@ -418,6 +427,27 @@ namespace Manager_Files
             this.StripMenuItem_Rename_A.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_Rename_A.Text = "Rename";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(151, 6);
+            // 
+            // StripMenuItem_Copy_A
+            // 
+            this.StripMenuItem_Copy_A.Image = global::Manager_Files.Properties.Resources.Copy_Ff;
+            this.StripMenuItem_Copy_A.Name = "StripMenuItem_Copy_A";
+            this.StripMenuItem_Copy_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Copy_A.Text = "Copy";
+            this.StripMenuItem_Copy_A.Click += new System.EventHandler(this.StripMenuItem_Copy_A_Click);
+            // 
+            // StripMenuItem_Move_A
+            // 
+            this.StripMenuItem_Move_A.Image = global::Manager_Files.Properties.Resources.Cut_Ff;
+            this.StripMenuItem_Move_A.Name = "StripMenuItem_Move_A";
+            this.StripMenuItem_Move_A.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Move_A.Text = "Move";
+            this.StripMenuItem_Move_A.Click += new System.EventHandler(this.StripMenuItem_Move_A_Click);
+            // 
             // contextMenuStripB
             // 
             this.contextMenuStripB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -427,9 +457,12 @@ namespace Manager_Files
             this.toolStripSeparator1,
             this.StripMenuItem_NewFolder_B,
             this.StripMenuItem_Delete_B,
-            this.StripMenuItem_Rename_B});
+            this.StripMenuItem_Rename_B,
+            this.toolStripSeparator4,
+            this.StripMenuItem_Copy_B,
+            this.StripMenuItem_Move_B});
             this.contextMenuStripB.Name = "contextMenuStripB";
-            this.contextMenuStripB.Size = new System.Drawing.Size(155, 142);
+            this.contextMenuStripB.Size = new System.Drawing.Size(155, 192);
             // 
             // StripMenuItem_SelectAll_B
             // 
@@ -477,6 +510,27 @@ namespace Manager_Files
             this.StripMenuItem_Rename_B.Name = "StripMenuItem_Rename_B";
             this.StripMenuItem_Rename_B.Size = new System.Drawing.Size(154, 22);
             this.StripMenuItem_Rename_B.Text = "Rename";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(151, 6);
+            // 
+            // StripMenuItem_Copy_B
+            // 
+            this.StripMenuItem_Copy_B.Image = global::Manager_Files.Properties.Resources.Copy_Ff;
+            this.StripMenuItem_Copy_B.Name = "StripMenuItem_Copy_B";
+            this.StripMenuItem_Copy_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Copy_B.Text = "Copy";
+            this.StripMenuItem_Copy_B.Click += new System.EventHandler(this.StripMenuItem_Copy_B_Click);
+            // 
+            // StripMenuItem_Move_B
+            // 
+            this.StripMenuItem_Move_B.Image = global::Manager_Files.Properties.Resources.Cut_Ff;
+            this.StripMenuItem_Move_B.Name = "StripMenuItem_Move_B";
+            this.StripMenuItem_Move_B.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuItem_Move_B.Text = "Move";
+            this.StripMenuItem_Move_B.Click += new System.EventHandler(this.StripMenuItem_Move_B_Click);
             // 
             // frm_Main
             // 
@@ -543,5 +597,11 @@ namespace Manager_Files
         private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Rename_B;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Copy_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Move_A;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Copy_B;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuItem_Move_B;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
